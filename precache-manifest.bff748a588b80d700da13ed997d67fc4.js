@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f3d11bf64ea2f67e0bac0986187b04ab",
+    "revision": "7c9534e341adf51a290345c846a18dc0",
     "url": "/blackcodher-react-mybookcase2/index.html"
   },
   {
-    "revision": "0ce41cd0e8c3ea5bf4db",
+    "revision": "2fcd8c935ab65d588d56",
     "url": "/blackcodher-react-mybookcase2/static/css/main.53024bc6.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blackcodher-react-mybookcase2/static/js/2.8b982c36.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0ce41cd0e8c3ea5bf4db",
-    "url": "/blackcodher-react-mybookcase2/static/js/main.3a353de4.chunk.js"
+    "revision": "2fcd8c935ab65d588d56",
+    "url": "/blackcodher-react-mybookcase2/static/js/main.7730bb0a.chunk.js"
   },
   {
     "revision": "d24be0c08303f8cd9285",
