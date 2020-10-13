@@ -18,19 +18,19 @@ const App = (props) => {
   return (
     <>
     <Router>
-      <Route exact path="/" render= {() => (
+      <Route exact path="/blackcodher-react-mybookcase2" render= {() => (
         <React.Fragment>
           <Header />
           <BookList books={books} addBook={addBook} />
         </React.Fragment>
       )} />
-            <Route exact path="/pages/About" render= {() => (
+            <Route exact path="/blackcodher-react-mybookcase2/pages/About" render= {() => (
         <React.Fragment>
           <Header /> 
           <About />
         </React.Fragment>
       )} />
-            <Route exact path="/bookcase" render= {() => (
+            <Route exact path="/blackcodher-react-mybookcase2/bookcase" render= {() => (
         <React.Fragment>
           <Header />
         </React.Fragment>
