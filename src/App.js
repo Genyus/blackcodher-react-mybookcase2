@@ -54,6 +54,7 @@ setBooks(results.items)
         </React.Fragment>
       )} />
     </Router>
+    <Router basename='blackcodher-react-mybookcase2'></Router>
     </>
   )
  }
