@@ -29,7 +29,7 @@ setBooks(results.items)
 
   return (
     <>
-    <Router>
+    <Router basename='blackcodher-react-mybookcase2'>
       <Route exact path="/" render= {() => (
         <React.Fragment>
           <Header />
@@ -54,7 +54,6 @@ setBooks(results.items)
         </React.Fragment>
       )} />
     </Router>
-    <Router basename='blackcodher-react-mybookcase2'></Router>
     </>
   )
  }
