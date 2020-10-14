@@ -8,11 +8,11 @@ function Footer() {
             <hr />
                 <h3><u>Project Links</u></h3>
                 <div className="projectLinks">
-                <Link to="https://affirmedvisionary.github.io/blackcodher-bootcamp/">Contents</Link>
-                <Link to="https://affirmedvisionary.github.io/blackcodher-bootcamp/html/portfolio/index.html">Personal Profile</Link>
-                <Link to="https://affirmedvisionary.github.io/blackcodher-bootcamp/html/bookshop/index.html">Book Shop</Link>
-                <Link to="https://affirmedvisionary.github.io/blackcodher-bootcamp/javascript/quiz-along/index.html">Simple Quiz</Link>
-                <Link to="https://affirmedvisionary.github.io/blackcodher-react-mybookcase2/">My Bookcase</Link>
+                <a href="https://affirmedvisionary.github.io/blackcodher-bootcamp/">Contents</a>
+                <a href="https://affirmedvisionary.github.io/blackcodher-bootcamp/html/portfolio/index.html">Personal Profile</a>
+                <a href="https://affirmedvisionary.github.io/blackcodher-bootcamp/html/bookshop/index.html">Book Shop</a>
+                <a href="https://affirmedvisionary.github.io/blackcodher-bootcamp/javascript/quiz-along/index.html">Simple Quiz</a>
+                <a href="https://affirmedvisionary.github.io/blackcodher-react-mybookcase2/">My Bookcase</a>
                 </div>
                 <p className="copyright"><Link to="mailto:iam@charlenegrant.co.uk">Charlene Grant</Link> 2020</p>
                 </div>

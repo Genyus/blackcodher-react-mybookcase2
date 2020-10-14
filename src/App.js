@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/Header';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 import Search from './components/Search';
 import BookList from './components/BookList';
 import data from './models/books.json';
@@ -35,7 +35,7 @@ setBooks(results.items)
           <Header />
           <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword}/>
           <BookList books={books} addBook={addBook} />
-        {/* <Footer /> */}
+          <Footer />
         </React.Fragment>
       )} />
             <Route exact path="/pages/About" render= {() => (
@@ -43,14 +43,14 @@ setBooks(results.items)
           <Header /> 
           <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword} />
           <About />
-          {/* <Footer /> */}
+          <Footer />
         </React.Fragment>
       )} />
             <Route exact path="/bookcase" render= {() => (
         <React.Fragment>
           <Header />
           <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword} />
-          {/* <Footer /> */}
+          <Footer />
         </React.Fragment>
       )} />
     </Router>
