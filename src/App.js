@@ -12,10 +12,13 @@ import About from './pages/About';
 const App = (props) => {
   const [books, setBooks] = useState(data);
   const [keyword, setKeyword] = useState('');
+  const [bookcase, setBookcase] = useState([]);
 
   function addBook (title, id) {
     const newBookList = books.filter(book => book.id !== id);
-    setBooks(newBookList)
+    const chosenBook = books.filter(book => book.id === id);
+    setBooks(newBookList);
+    setBookcase([...bookcase, ...chosenBook]);
   console.log(`The Book ${title} with the id of ${id} was clicked.`);
  }
 
@@ -50,6 +53,7 @@ setBooks(results.items)
         <React.Fragment>
           <Header />
           <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword} />
+          <BookList books={bookcase} />
           <Footer />
         </React.Fragment>
       )} />
