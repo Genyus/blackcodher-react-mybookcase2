@@ -36,16 +36,13 @@ setBooks(results.items)
     <Router basename='blackcodher-react-mybookcase2'>
       <Route exact path="/" render= {() => (
         <React.Fragment>
-          <Header />
           <Home />
-          <br></br>
           <Footer />
         </React.Fragment>
       )} />
             <Route exact path="/pages/Search" render= {() => (
         <React.Fragment>
           <Header />
-          <h2>Look for A Book</h2>
           <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword}/>
           <br></br>
           <BookList books={books} addBook={addBook} />

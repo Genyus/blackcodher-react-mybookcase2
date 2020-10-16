@@ -5,8 +5,8 @@
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.pixabay.com/photo/2017/08/01/10/44/people-2564463_1280.jpg");
     /* Set a specific height */
-    height: 500px;
-    width: 800px;
+    height: 685px;
+    width: 1200px;
     border: black solid 2px;
     border-radius: 5%;
     /* Position and center the image to scale nicely on all screens */
@@ -18,16 +18,19 @@
   
   /* Place text in the middle of the image */
   .hero-text {
-    border-radius: 10%;
-    border: 2px solid #ffcc66;
-    text-align: center;
+    border-radius: 5%;
+    border: 2px solid white;
     position: absolute;
+    padding: 10px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+
   }
 
+  h1 {
+      margin: 0;
+  }
   .aboutButton {
       color: black;
       font-weight: bold;
