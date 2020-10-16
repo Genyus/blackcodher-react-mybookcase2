@@ -13,6 +13,7 @@ import Home from './pages/Home';
 const App = (props) => {
   const [books, setBooks] = useState(data);
   const [keyword, setKeyword] = useState('');
+  const [authorKeyword, setAuthorKeyword] = useState('');
   const [bookcase, setBookcase] = useState([]);
 
   function addBook (title, id) {
@@ -23,16 +24,16 @@ const App = (props) => {
   console.log(`The Book ${title} with the id of ${id} was clicked.`);
  }
 
-async function findBooks(value) {
+async function findBooks(value, authorValue) {
   const results = await
 fetch(
-  `https://www.googleapis.com/books/v1/volumes?q=${value}&filter=paid-ebooks&print-type=books&projection=lite`
+  `https://www.googleapis.com/books/v1/volumes?q=${value}+inauthor:${authorValue}&projection=lite`
 ).then(res => res.json());
 setBooks(results.items)
 }
 
   return (
-    <>
+    <>    
     <Router basename='blackcodher-react-mybookcase2'>
       <Route exact path="/" render= {() => (
         <React.Fragment>
@@ -43,7 +44,7 @@ setBooks(results.items)
             <Route exact path="/pages/Search" render= {() => (
         <React.Fragment>
           <Header />
-          <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword}/>
+          <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword} authorKeyword={authorKeyword} setAuthorKeyword={setAuthorKeyword}/>
           <br></br>
           <BookList books={books} addBook={addBook} />
           <Footer />
