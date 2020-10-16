@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Search from './components/Search';
+import Search from './pages/Search';
 import BookList from './components/BookList';
 import data from './models/books.json';
 import About from './pages/About';
+import Home from './pages/Home';
 // import logo from './logo.svg';
 // import './App.css';
 
@@ -36,7 +37,17 @@ setBooks(results.items)
       <Route exact path="/" render= {() => (
         <React.Fragment>
           <Header />
+          <Home />
+          <br></br>
+          <Footer />
+        </React.Fragment>
+      )} />
+            <Route exact path="/pages/Search" render= {() => (
+        <React.Fragment>
+          <Header />
+          <h2>Look for A Book</h2>
           <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword}/>
+          <br></br>
           <BookList books={books} addBook={addBook} />
           <Footer />
         </React.Fragment>
@@ -44,7 +55,6 @@ setBooks(results.items)
             <Route exact path="/pages/About" render= {() => (
         <React.Fragment>
           <Header /> 
-          <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword} />
           <About />
           <Footer />
         </React.Fragment>
@@ -52,7 +62,6 @@ setBooks(results.items)
             <Route exact path="/bookcase" render= {() => (
         <React.Fragment>
           <Header />
-          <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword} />
           <BookList books={bookcase} />
           <Footer />
         </React.Fragment>

@@ -8,6 +8,7 @@ function Header() {
            <div className="header">
             <h1>My Bookcase</h1>
             <Link to='/' className="bookLink">Home</Link>
+            <Link to='/pages/Search' className="bookLink">Search</Link>
             <Link to="/pages/About" className="bookLink">About</Link>
             <Link to="/bookcase" className="bookLink">Bookcase</Link>
             <br></br>
