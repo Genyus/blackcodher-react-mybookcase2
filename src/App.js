@@ -24,6 +24,11 @@ const App = (props) => {
   console.log(`The Book ${title} with the id of ${id} was clicked.`);
  }
 
+ function removeBook(id) {
+   const newBookcaseList = bookcase.filter(book => book.id !== id);
+   setBookcase(newBookcaseList);
+ }
+
 async function findBooks(value, authorValue) {
   const results = await
 fetch(
@@ -60,7 +65,7 @@ setBooks(results.items)
             <Route exact path="/bookcase" render= {() => (
         <React.Fragment>
           <Header />
-          <BookList books={bookcase} />
+          <BookList books={bookcase} removeBook={removeBook}/>
           <Footer />
         </React.Fragment>
       )} />

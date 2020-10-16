@@ -30,7 +30,6 @@ const Book = (props) => {
         //     return url;
         // }
         // };
-        
 
     return (
         <div className='book'>
@@ -39,7 +38,12 @@ const Book = (props) => {
             <img src= {thumbnail || smallThumbnail} alt={title}/>
             <p>{listPrice && listPrice.amount}</p>
             <p>{description}</p>
-            <button onClick={() => props.addBook(title, id)}>Add +</button>
+            {props.addBook && (
+                <button onClick={() => props.addBook(title, id)}>Add +</button>
+            )}
+            {props.removeBook && (
+                <button onClick={() => props.removeBook(id)}>Remove</button>
+            )}            
         </div>
     );
 }
