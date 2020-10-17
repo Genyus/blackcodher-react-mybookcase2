@@ -14,6 +14,8 @@ const App = (props) => {
   const [books, setBooks] = useState(data);
   const [keyword, setKeyword] = useState('');
   const [authorKeyword, setAuthorKeyword] = useState('');
+  const [subjectKeyword, setSubjectKeyword] = useState('');
+  const [titleKeyword, setTitleKeyword] = useState('');
   const [bookcase, setBookcase] = useState([]);
 
   function addBook (title, id) {
@@ -30,10 +32,10 @@ const App = (props) => {
    console.log(`The Book with the id of ${id} was removed. there are now ${bookcase.length - 1}`);
  }
 
-async function findBooks(value, authorValue) {
+async function findBooks(value, authorValue, titleValue, subjectValue) {
   const results = await
 fetch(
-  `https://www.googleapis.com/books/v1/volumes?q=${value}+inauthor:${authorValue}&projection=lite`
+  `https://www.googleapis.com/books/v1/volumes?q=${value}+inauthor:${authorValue}+subject:${subjectValue}+intitle:${titleValue}&projection=lite`
 ).then(res => res.json());
 setBooks(results.items)
 }
@@ -50,7 +52,12 @@ setBooks(results.items)
             <Route exact path="/pages/Search" render= {() => (
         <React.Fragment>
           <Header />
-          <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword} authorKeyword={authorKeyword} setAuthorKeyword={setAuthorKeyword}/>
+          <Search findBooks={findBooks} 
+          keyword={keyword} setKeyword={setKeyword} 
+          authorKeyword={authorKeyword} setAuthorKeyword={setAuthorKeyword}
+          subjectKeyword={subjectKeyword} setSubjectKeyword={setSubjectKeyword}
+          titleKeyword={titleKeyword} setTitleKeyword={setTitleKeyword}
+          />
           <br></br>
           <BookList books={books} addBook={addBook} />
           <Footer />
