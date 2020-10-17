@@ -21,12 +21,13 @@ const App = (props) => {
     const chosenBook = books.filter(book => book.id === id);
     setBooks(newBookList);
     setBookcase([...bookcase, ...chosenBook]);
-  console.log(`The Book ${title} with the id of ${id} was clicked.`);
+  console.log(`The Book ${title} with the id of ${id} was added. there are now ${bookcase.length + 1}`);
  }
 
  function removeBook(id) {
    const newBookcaseList = bookcase.filter(book => book.id !== id);
    setBookcase(newBookcaseList);
+   console.log(`The Book with the id of ${id} was removed. there are now ${bookcase.length - 1}`);
  }
 
 async function findBooks(value, authorValue) {
