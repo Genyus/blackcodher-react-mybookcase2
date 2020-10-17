@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 
 const Book = (props) => {
 
-    let {id, volumeInfo: {title, authors, description, imageLinks:{thumbnail, smallThumbnail}},
+    let {id, volumeInfo: {title, authors, description, imageLinks:{smallThumbnail}},
         saleInfo:{listPrice}} 
         = props.book;
    
@@ -35,7 +35,7 @@ const Book = (props) => {
         <div className='book'>
             <h2>{title}</h2>
             <h3>by {authors}</h3>
-            <img src= {thumbnail || smallThumbnail} alt={title}/>
+            <img src= {smallThumbnail} alt={title}/>
             <p>{listPrice && listPrice.amount}</p>
             <p>{description}</p>
             {props.addBook && (

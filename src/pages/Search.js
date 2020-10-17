@@ -3,10 +3,13 @@ import React from 'react';
 const Search = (props) => {
 
 function handleSubmit(event) {
+    console.log(event)
     event.preventDefault();
-    props.findBooks(props.keyword, props.authorKeyword);
+    props.findBooks(props.keyword, props.authorKeyword, props.titleKeyword, props.subjectKeyword);
     props.setKeyword("");
-    props.setAuthorKeyword("")
+    props.setAuthorKeyword("");
+    props.setTitleKeyword("");
+    props.setSubjectKeyword("");
 }
 
     return (
@@ -15,6 +18,10 @@ function handleSubmit(event) {
         <input type="text" value={props.keyword} onChange={(e) => props.setKeyword(e.target.value)} />
         <label>Search Author </label>
         <input type="text" value={props.authorKeyword} onChange={(e) => props.setAuthorKeyword(e.target.value)} />
+        <label>Search Title </label>
+        <input type="text" value={props.titleKeyword} onChange={(e) => props.setTitleKeyword(e.target.value)} />
+        <label>Search Subject </label>
+        <input type="text" value={props.subjectKeyword} onChange={(e) => props.setSubjectKeyword(e.target.value)} />
         <button>Submit</button>
     </form>
     )
