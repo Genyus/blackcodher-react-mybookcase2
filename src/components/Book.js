@@ -33,17 +33,19 @@ const Book = (props) => {
 
     return (
         <div className='book'>
-            <h2>{title}</h2>
-            <h3>by {authors}</h3>
+            <span className="imgPriceAdd">
             <img src= {smallThumbnail} alt={title}/>
             <p>{listPrice && listPrice.amount}</p>
-            <p>{description}</p>
             {props.addBook && (
                 <button onClick={() => props.addBook(title, id)}>Add +</button>
             )}
             {props.removeBook && (
                 <button onClick={() => props.removeBook(id)}>Remove</button>
             )}            
+            </span>
+            <h2 className="bookTitle">{title}</h2>
+            <h3 className="bookAuthor">by {authors}</h3>
+            <p>{description}</p>
         </div>
     );
 }
