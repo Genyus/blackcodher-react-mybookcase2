@@ -35,17 +35,17 @@ const Book = (props) => {
         <div className='book'>
             <span className="imgPriceAdd">
             <img src= {smallThumbnail} alt={title}/>
-            <p>{listPrice && listPrice.amount}</p>
             {props.addBook && (
-                <button onClick={() => props.addBook(title, id)}>Add +</button>
+                <button className="addRemoveBtn" onClick={() => props.addBook(title, id)}>Add +</button>
             )}
             {props.removeBook && (
-                <button onClick={() => props.removeBook(id)}>Remove</button>
+                <button className="addRemoveBtn" onClick={() => props.removeBook(id)}>Remove</button>
             )}            
             </span>
             <h2 className="bookTitle">{title}</h2>
             <h3 className="bookAuthor">by {authors}</h3>
-            <p>{description}</p>
+            <p className="bookPrice">£{listPrice && listPrice.amount}</p>
+            <p className="bookDescription">{description}</p>
         </div>
     );
 }
