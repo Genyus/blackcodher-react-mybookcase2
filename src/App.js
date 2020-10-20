@@ -7,6 +7,7 @@ import BookList from './components/BookList';
 import data from './models/books.json';
 import About from './pages/About';
 import Home from './pages/Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import logo from './logo.svg';
 // import './App.css';
 
@@ -70,7 +71,7 @@ setBooks(results.items)
         <React.Fragment>
           <Header />
           <div>
-            <h2>You have {bookcase.length} book(s) on your shelf</h2>
+            <h4>You have {bookcase.length} book(s) on your shelf</h4>
           </div>
           <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword} authorKeyword={authorKeyword} setAuthorKeyword={setAuthorKeyword} subjectKeyword={subjectKeyword} setSubjectKeyword={setSubjectKeyword} titleKeyword={titleKeyword} setTitleKeyword={setTitleKeyword}
           />
@@ -83,7 +84,7 @@ setBooks(results.items)
         <React.Fragment>
           <Header /> 
           <div>
-            <h2>You have {bookcase.length} book(s) on your shelf</h2>
+            <h4>You have {bookcase.length} book(s) on your shelf</h4>
           </div>
           <About />
           <Footer />
@@ -93,7 +94,7 @@ setBooks(results.items)
         <React.Fragment>
           <Header />
           <div>
-            <h2>You have {bookcase.length} book(s) on your shelf</h2>
+            <h4>You have {bookcase.length} book(s) on your shelf</h4>
           </div>
           <BookList books={bookcase} removeBook={removeBook}/>
           <Footer />
