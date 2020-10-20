@@ -1,7 +1,7 @@
-.book {
+/* .book {
     display: block;
     position: relative;
-    /* display: table-cell; */
+    display: table-cell;
     margin: auto;
     margin-bottom: 1rem;
     text-align: center;
@@ -9,38 +9,37 @@
     height: 300px;
     border: 2px solid black;
     padding: 20px;
-}
+} */
 
-.imgPriceAdd {
+/* .imgPriceAdd {
     position:absolute;
   top: 0; bottom: 0; right: 1060px;
   margin: auto;
-  height: 280px; /*requires explicit height*/
+  height: 280px; requires explicit height
     float: left;
     margin-right: 20px;
-}
+} */
 
-.bookTitle, .bookAuthor {
+/* .bookTitle, .bookAuthor {
     margin-block-start: 0;
     margin-block-end: 0;
     margin-left: 160px;
-}
+} */
 
 .bookDescription {
-    margin-left: 160px;
     max-height: 200px;
     overflow: hidden;
 }
 
-.bookPrice {
+/* .bookPrice {
     font-weight: bold;
     margin-block-start: 0;
     margin-block-end: 0;
     margin-left: 160px;
-
 }
+ */
 
-.addRemoveBtn {
+/* .addRemoveBtn {
     background: #FFE8BA;
     background-image: -webkit-linear-gradient(top, #FFE8BA, #FFCC66);
     background-image: -moz-linear-gradient(top, #FFE8BA, #FFCC66);
@@ -63,13 +62,13 @@
     cursor: pointer;
     text-align: center;
     margin-top: 25px;
- }
+ } */
  
- .addRemoveBtn:hover {
+ /* .addRemoveBtn:hover {
     background: #FFCC66;
     border: solid #000000 1px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
     text-decoration: none;
- }
+ } */
