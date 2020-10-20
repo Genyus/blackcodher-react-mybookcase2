@@ -1,0 +1,13 @@
+.search-container {
+    border: 1px solid black;
+    padding: 10% 9%;
+    height: 300px;
+}
+
+.search-form {
+    padding: 5px;
+}
+
+.search-field {
+    margin: 1px;
+}
