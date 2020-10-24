@@ -1,19 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import '../pages/home.css'
+import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
+import '../App.css'
 // import Header from '../components/Header'
 
 function Home() {
     return (
         <React.Fragment>
-        <div className="home">
+        <Container className="hero">
          <div className="hero-text">
             <h1>The Bookcase</h1>
-            <Link to="/pages/About" className="bookLink"><button className="aboutButton">About</button></Link>
-            <Link to='/pages/Search' className="bookLink"><button className="aboutButton">Search</button></Link>
-            <Link to="/bookcase" className="bookLink"><button className="aboutButton">Bookcase</button></Link>
+            <Button href="/pages/About">About</Button>
+            <Button href="/pages/Search">Search</Button>
+            <Button href="/bookcase">Bookcase</Button>
          </div>
-        </div>
+        </Container>
         </React.Fragment>
     )
 }

@@ -1,8 +1,9 @@
 import React, { Fragment }from 'react';
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
-import Button from 'react-bootstrap/Form'
-import './search.css'
+import Button from 'react-bootstrap/Button'
+// import './search.css'
+import '../App.css'
 
 const Search = (props) => {
 
@@ -18,6 +19,7 @@ function handleSubmit(event) {
 
     return (
         <Fragment>
+            <hr></hr>
             <div className="search-container">
                 <h4>Choose one of the following search queries:</h4>
                 <Form inline onSubmit={handleSubmit} className="search-form">
@@ -33,10 +35,11 @@ function handleSubmit(event) {
                         
                         <Form.Label srOnly>Search by Subject</Form.Label>
                         <Form.Control className="search-field" type="text" value={props.subjectKeyword} onChange={(e) => props.setSubjectKeyword(e.target.value)} placeholder="Subject" />
+                        <Button as="input" type="submit" value="Submit" />{' '}
                     </Form.Group>
-                    <Button as="input" type="submit" value="Submit" />{' '}
                 </Form>
             </div>
+            <hr></hr>
           </Fragment>
     )
 }

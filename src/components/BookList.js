@@ -1,10 +1,9 @@
 import Book from './Book';
 import React, { useState } from "react";
 import Pagination from "react-js-pagination";
-import '../components/bookList.css'
 // import data from './models/books.json';
 // import logo from './logo.svg';
-// import './App.css';
+import '../App.css';
 
 const BookList = (props) => {
   const booksPerPage = 8

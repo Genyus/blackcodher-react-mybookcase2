@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
+
 // import addBook from '../App'
 // import Book from '../models/books.json'
 
@@ -52,10 +54,10 @@ const Book = (props) => {
             <Col lg="2">
             <p className="bookPrice">£{listPrice && listPrice.amount}</p>
             {props.addBook && (
-                <button className="addRemoveBtn" onClick={() => props.addBook(title, id)}>Add +</button>
+                <Button  onClick={() => props.addBook(title, id)}>Add +</Button>
             )}
             {props.removeBook && (
-                <button className="addRemoveBtn" onClick={() => props.removeBook(id)}>Remove</button>
+                <Button  onClick={() => props.removeBook(id)}>Remove</Button>
             )}            
             </Col>
         </Row>
