@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -17,9 +18,10 @@ const App = (props) => {
   const [authorKeyword, setAuthorKeyword] = useState('');
   const [subjectKeyword, setSubjectKeyword] = useState('');
   const [titleKeyword, setTitleKeyword] = useState('');
-  const [bookcase, setBookcase] = useState([]);
+    const [bookcase, setBookcase] = useState([]);
 console.log(titleKeyword)
-  function addBook (title, id) {
+  
+function addBook (title, id) {
     const newBookList = books.filter(book => book.id !== id);
     const chosenBook = books.filter(book => book.id === id);
     setBooks(newBookList);
@@ -35,6 +37,7 @@ console.log(titleKeyword)
 
  useEffect(() => {
   document.title = `${bookcase.length} books in bookcase`;
+  ReactDOM.render(`You have ${bookcase.length} books in bookcase`, document.getElementById('shelf'));
 }, [bookcase]);
 
 async function findBooks(value, authorValue, titleValue, subjectValue) {
@@ -61,8 +64,9 @@ setBooks(results.items)
   return (
     <>    
     <Router basename='blackcodher-react-mybookcase2'>
-      <Route exact path="/" render= {() => (
+      <Route exact path="/mybookcase" render= {() => (
         <React.Fragment>
+          <Header />
           <Home />
           <Footer />
         </React.Fragment>
@@ -70,9 +74,6 @@ setBooks(results.items)
             <Route exact path="/pages/Search" render= {() => (
         <React.Fragment>
           <Header />
-          <div>
-            <h4>You have {bookcase.length} book(s) on your shelf</h4>
-          </div>
           <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword} authorKeyword={authorKeyword} setAuthorKeyword={setAuthorKeyword} subjectKeyword={subjectKeyword} setSubjectKeyword={setSubjectKeyword} titleKeyword={titleKeyword} setTitleKeyword={setTitleKeyword}
           />
           <br></br>
@@ -83,9 +84,6 @@ setBooks(results.items)
             <Route exact path="/pages/About" render= {() => (
         <React.Fragment>
           <Header /> 
-          <div>
-            <h4>You have {bookcase.length} book(s) on your shelf</h4>
-          </div>
           <About />
           <Footer />
         </React.Fragment>
@@ -93,9 +91,6 @@ setBooks(results.items)
             <Route exact path="/bookcase" render= {() => (
         <React.Fragment>
           <Header />
-          <div>
-            <h4>You have {bookcase.length} book(s) on your shelf</h4>
-          </div>
           <BookList books={bookcase} removeBook={removeBook}/>
           <Footer />
         </React.Fragment>

@@ -37,6 +37,7 @@ const Book = (props) => {
         // };
 
     return (
+        <>
         <Container>
         <Row className="align-items-center justify-content-md-center book">
             <h2 className="bookTitle">{title}</h2>
@@ -54,15 +55,16 @@ const Book = (props) => {
             <Col lg="2">
             <p className="bookPrice">£{listPrice && listPrice.amount}</p>
             {props.addBook && (
-                <Button  onClick={() => props.addBook(title, id)}>Add +</Button>
+                <Button variant="warning" onClick={() => props.addBook(title, id)}>Add +</Button>
             )}
             {props.removeBook && (
-                <Button  onClick={() => props.removeBook(id)}>Remove</Button>
+                <Button variant="warning" onClick={() => props.removeBook(id)}>Remove</Button>
             )}            
             </Col>
         </Row>
-        <hr></hr>
         </Container>
+                <hr></hr>
+</>
     );
 }
 

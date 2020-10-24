@@ -2,6 +2,7 @@ import React, { Fragment }from 'react';
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
 // import './search.css'
 import '../App.css'
 
@@ -19,7 +20,11 @@ function handleSubmit(event) {
 
     return (
         <Fragment>
-            <hr></hr>
+             <Container className="hero">
+         <div className="hero-text">
+         <h1>Search</h1>
+         </div>
+        </Container>
             <div className="search-container">
                 <h4>Choose one of the following search queries:</h4>
                 <Form inline onSubmit={handleSubmit} className="search-form">
@@ -35,7 +40,7 @@ function handleSubmit(event) {
                         
                         <Form.Label srOnly>Search by Subject</Form.Label>
                         <Form.Control className="search-field" type="text" value={props.subjectKeyword} onChange={(e) => props.setSubjectKeyword(e.target.value)} placeholder="Subject" />
-                        <Button as="input" type="submit" value="Submit" />{' '}
+                        <Button variant="warning" as="input" type="submit" value="Submit" />{' '}
                     </Form.Group>
                 </Form>
             </div>
