@@ -11,8 +11,8 @@ function Home() {
         <Container className="hero">
          <div as={Row} className="hero-text">
             <h1>The Bookcase</h1>
-            <Button className="btnSpace" variant="warning" href="/pages/About">About</Button>
-            <Button className="btnSpace" variant="warning" href="/pages/Search">Search</Button>
+            <Button className="btnSpace" variant="warning" href="/about">About</Button>
+            <Button className="btnSpace" variant="warning" href="/search">Search</Button>
             <Button className="btnSpace" variant="warning" href="/bookcase">Bookcase</Button>
          </div>
         </Container>

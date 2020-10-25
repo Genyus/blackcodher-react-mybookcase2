@@ -71,7 +71,7 @@ setBooks(results.items)
           <Footer />
         </React.Fragment>
       )} />
-            <Route exact path="/pages/Search" render= {() => (
+            <Route exact path="/search" render= {() => (
         <React.Fragment>
           <Header />
           <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword} authorKeyword={authorKeyword} setAuthorKeyword={setAuthorKeyword} subjectKeyword={subjectKeyword} setSubjectKeyword={setSubjectKeyword} titleKeyword={titleKeyword} setTitleKeyword={setTitleKeyword}
@@ -81,7 +81,7 @@ setBooks(results.items)
           <Footer />
         </React.Fragment>
       )} />
-            <Route exact path="/pages/About" render= {() => (
+            <Route exact path="/about" render= {() => (
         <React.Fragment>
           <Header /> 
           <About />
