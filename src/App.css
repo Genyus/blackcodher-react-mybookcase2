@@ -20,19 +20,35 @@ a {
     padding: 2px;
 }
 
+hr {
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: #ffcc66;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+    width: 1150px;
+}
+hr:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: #ffcc66;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
 /* Header */
-#shelf {
+#shelf, #navTitle {
     color: #ffcc66;
 }
 
-
 /* Stand Alone Pages */
+
 /* Home Page */
-.btnSpace {
-    margin: 0 2px;
-}
 .hero {
-    text-align: center;
     display: block;
     margin: auto;
     margin-top: 20px;
@@ -41,8 +57,6 @@ a {
     /* Set a specific height */
     height: 600px;
     width: 1200px;
-    /* border: black solid 2px;
-    border-radius: 5%; */
     /* Position and center the image to scale nicely on all screens */
     background-position: bottom;
     background-repeat: no-repeat;
@@ -52,9 +66,6 @@ a {
   
   /* Place text in the middle of the image */
   .hero-text {
-    /* border-radius: 10%;
-    border: 2px solid #ffcc66; */
-    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -64,16 +75,11 @@ a {
 
   /* Search Component */
 .search-container {
-    padding: 2% 9%;
-}
-
-.search-form {
-    justify-content: center;
-    padding: 5px;
+    padding: 2% 7%;
 }
 
 .search-field {
-    margin: 1px;
+    margin-bottom: 3px;
 }
 
 /* Pagination */
@@ -96,8 +102,7 @@ a {
 }
 
 .bookPrice {
-    border: thin solid #ffcc66;
-    border-radius: 100%;
+    font-weight: bold;
 }
 /* About Page */
 
