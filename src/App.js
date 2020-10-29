@@ -9,8 +9,6 @@ import data from './models/books.json';
 import About from './pages/About';
 import Home from './pages/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import logo from './logo.svg';
-// import './App.css';
 
 const App = (props) => {
   const [books, setBooks] = useState(data);
@@ -18,8 +16,8 @@ const App = (props) => {
   const [authorKeyword, setAuthorKeyword] = useState('');
   const [subjectKeyword, setSubjectKeyword] = useState('');
   const [titleKeyword, setTitleKeyword] = useState('');
-    const [bookcase, setBookcase] = useState([]);
-console.log(titleKeyword)
+  const [bookcase, setBookcase] = useState([]);
+// console.log(titleKeyword)
   
 function addBook (title, id) {
     const newBookList = books.filter(book => book.id !== id);
@@ -66,24 +64,22 @@ setBooks(results.items)
     <Router basename='blackcodher-react-mybookcase2'>
       <Route exact path="/" render= {() => (
         <React.Fragment>
-          <Header />
+           <Header />
           <Home />
           <Footer />
         </React.Fragment>
       )} />
             <Route exact path="/search" render= {() => (
         <React.Fragment>
-          <Header />
-          <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword} authorKeyword={authorKeyword} setAuthorKeyword={setAuthorKeyword} subjectKeyword={subjectKeyword} setSubjectKeyword={setSubjectKeyword} titleKeyword={titleKeyword} setTitleKeyword={setTitleKeyword}
-          />
-          <br></br>
+              <Header />
+          <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword} authorKeyword={authorKeyword} setAuthorKeyword={setAuthorKeyword} subjectKeyword={subjectKeyword} setSubjectKeyword={setSubjectKeyword} titleKeyword={titleKeyword} setTitleKeyword={setTitleKeyword}/>
           <BookList books={books} addBook={addBook} />
           <Footer />
         </React.Fragment>
       )} />
             <Route exact path="/about" render= {() => (
         <React.Fragment>
-          <Header /> 
+    <Header />
           <About />
           <Footer />
         </React.Fragment>
@@ -99,26 +95,5 @@ setBooks(results.items)
     </>
   )
  }
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;
