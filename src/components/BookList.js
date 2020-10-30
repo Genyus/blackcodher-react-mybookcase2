@@ -30,7 +30,7 @@ import '../App.css';
       </div>
     </Container> 
     <Container> 
-    {renderBooks} 
+    {renderBooks}
     <div className = "pagination"> 
       <Pagination
         activePage={activePage}
